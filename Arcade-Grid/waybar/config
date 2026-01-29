@@ -1,0 +1,60 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 35,
+    "margin": 5,
+    "spacing": 10,
+
+    "modules-left": ["custom/pacman", "hyprland/workspaces", "custom/divider", "cpu", "memory"],
+    "modules-center": ["custom/left-bracket", "clock", "custom/right-bracket"],
+    "modules-right": ["pulseaudio", "network", "battery", "custom/power"],
+
+    "custom/pacman": {
+        "format": "󰮯 ",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "default": "󰄰",
+            "active": "󰄯",
+            "urgent": "󰀦"
+        }
+    },
+
+    "cpu": { "format": "CPU:{usage}%" },
+    "memory": { "format": "RAM:{percentage}%" },
+
+    "clock": {
+        "format": "HI-SCORE: {:%H:%M}",
+        "tooltip-format": "{:%A, %d de %B}"
+    },
+
+    "pulseaudio": {
+        "format": "VOL:{volume}",
+        "format-muted": "MUTED",
+        "on-click": "pavucontrol"
+    },
+
+    "battery": {
+        "format": "HP:{capacity}%",
+        "states": { "critical": 20 }
+    },
+
+    "network": {
+        "format-wifi": "SIG:MAX",
+        "format-disconnected": "SIG:DOWN"
+    },
+
+    "custom/divider": { "format": "::", "tooltip": false },
+    "custom/left-bracket": { "format": "[ ", "tooltip": false },
+    "custom/right-bracket": { "format": " ]", "tooltip": false },
+
+    "custom/power": {
+        "format": "GAME OVER",
+        "on-click": "wlogout"
+    }
+}

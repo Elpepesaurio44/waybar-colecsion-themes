@@ -1,0 +1,55 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 14px;
+}
+
+window#waybar {
+    background: rgba(10, 10, 15, 0.85);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Espaciado vertical entre iconos */
+#cpu, #memory, #disk, #backlight, #pulseaudio, #bluetooth, #network, #battery, #custom-logo {
+    padding: 8px 0;
+    color: #cdd6f4;
+}
+
+#workspaces {
+    margin: 5px 0;
+}
+
+#workspaces button {
+    padding: 4px 0;
+    color: #6c7086;
+    font-size: 18px;
+}
+
+#workspaces button.active {
+    color: #f5c2e7;
+}
+
+#custom-cava {
+    font-size: 12px;
+    color: #89b4fa;
+    margin: 10px 0;
+}
+
+#clock {
+    padding: 10px 0;
+    font-weight: bold;
+    color: #a6e3a1;
+}
+
+#cpu { color: #f38ba8; }
+#memory { color: #fab387; }
+#disk { color: #f9e2af; }
+#network { color: #89dceb; }
+#battery { color: #a6e3a1; }
+
+/* Efecto al pasar el mouse */
+#cpu:hover, #memory:hover, #pulseaudio:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}

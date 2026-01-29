@@ -1,0 +1,39 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 12,
+    "margin-left": 20,
+    "margin-right": 20,
+    "spacing": 15,
+
+    "modules-left": ["custom/logo", "hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "network", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate"
+    },
+
+    "mpris": {
+        "format": "󰎆 {title}",
+        "max-length": 20,
+        "player-icons": { "default": "󰎆", "spotify": "" }
+    },
+
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "tooltip-format": "{calendar}"
+    },
+
+    "cpu": { "format": "󰻠 {usage}%" },
+    "memory": { "format": "󰍛 {percentage}%" },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-icons": ["󰕿", "󰖀", "󰕾"]
+    },
+
+    "custom/logo": { "format": "󰣇", "tooltip": false },
+    "custom/power": { "format": "󰐥", "on-click": "wlogout" }
+}

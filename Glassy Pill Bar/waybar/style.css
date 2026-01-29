@@ -1,0 +1,91 @@
+/* Variables de colores SÓLIDOS (únicamente hex/rgba) */
+@define-color bg_glass rgba(26, 27, 38, 0.82);
+@define-color border_color rgba(255, 255, 255, 0.08);
+@define-color text_color #c0caf5;
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Inter";
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    border-radius: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+/* Base para todas las "Islas" */
+#custom-launcher,
+#workspaces,
+#window,
+#pulseaudio,
+#memory,
+#cpu,
+#clock,
+#tray,
+#custom-powermenu {
+    background-color: @bg_glass;
+    color: @text_color;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 4px;
+    border: 1px solid @border_color;
+    /* Efecto sutil de sombra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- MÓDULOS CON DEGRADADOS (Aquí está el fix) --- */
+
+#workspaces button.active {
+    background: linear-gradient(45deg, #7aa2f7, #bb9af7);
+    color: #1a1b26;
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+#window {
+    background: linear-gradient(45deg, #7aa2f7, #9ece6a);
+    color: #1a1b26;
+    margin: 4px 10px;
+    padding: 0 20px;
+}
+
+#clock {
+    background: linear-gradient(45deg, #bb9af7, #ff9e64);
+    color: #1a1b26;
+}
+
+#custom-powermenu {
+    background: linear-gradient(45deg, #f7768e, #ff9e64);
+    color: #1a1b26;
+    padding-right: 16px;
+}
+
+/* --- DETALLES DE INTERACCIÓN --- */
+
+#workspaces button {
+    color: #565f89;
+    padding: 0 5px;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #7aa2f7;
+}
+
+/* Launcher Estilo Neon */
+#custom-launcher {
+    color: #7aa2f7;
+    font-size: 18px;
+    padding-right: 15px;
+}
+
+/* Animación para el Tray */
+#tray {
+    padding: 0 10px;
+}
+
+#pulseaudio { color: #bb9af7; }
+#memory { color: #9ece6a; }
+#cpu { color: #e0af68; }

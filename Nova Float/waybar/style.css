@@ -1,0 +1,59 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-weight: bold;
+    font-size: 14px;
+}
+
+window#waybar {
+    background: transparent; /* Fondo transparente para ver las islas */
+}
+
+/* Estilo común para todas las "Islas" */
+#workspaces, #mpris, #clock, #network, #pulseaudio, #backlight, #battery, #custom-launcher, #custom-power {
+    background: rgba(26, 27, 38, 0.85); /* Oscuro con transparencia */
+    color: #c0caf5;
+    padding: 0px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+#custom-launcher {
+    font-size: 18px;
+    color: #7aa2f7;
+    margin-left: 10px;
+}
+
+#workspaces button {
+    color: #565f89;
+    padding: 0 4px;
+}
+
+#workspaces button.active {
+    color: #bb9af7;
+}
+
+#clock {
+    color: #9ece6a;
+    font-size: 15px;
+}
+
+#mpris {
+    color: #f7768e;
+}
+
+#network { color: #2ac3de; }
+#pulseaudio { color: #e0af68; }
+#battery { color: #9ece6a; }
+
+#custom-power {
+    color: #f7768e;
+    margin-right: 10px;
+}
+
+/* Animación sutil al pasar el mouse */
+#workspaces button:hover, #custom-launcher:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}

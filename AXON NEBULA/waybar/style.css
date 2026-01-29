@@ -1,0 +1,103 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 13px;
+    font-weight: 800;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* La Isla del Logo - Forma de diamante suave */
+#custom-logo {
+    background: linear-gradient(45deg, #ff007c, #ff5900);
+    color: white;
+    padding: 0 15px;
+    border-radius: 15px 2px 15px 2px;
+    margin-left: 10px;
+}
+
+/* Workspaces - Forma orgánica */
+#workspaces {
+    background: rgba(20, 20, 30, 0.9);
+    border-radius: 2px 15px 2px 15px;
+    border-bottom: 2px solid #ff007c;
+    padding: 0 10px;
+}
+
+#workspaces button {
+    color: #585b70;
+    padding: 0 5px;
+}
+
+#workspaces button.active {
+    color: #ff007c;
+    font-size: 16px;
+}
+
+/* Reproductor de música - Isla Larga con Glassmorphism */
+#mpris {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0 15px;
+    color: #f5c2e7;
+    font-style: italic;
+}
+
+/* Reloj Central - El "Núcleo" */
+#clock {
+    background: rgba(17, 17, 27, 0.95);
+    color: #89b4fa;
+    padding: 5px 25px;
+    border-radius: 50px;
+    border: 2px solid #89b4fa;
+    box-shadow: 0 0 15px rgba(137, 180, 250, 0.4);
+    font-size: 15px;
+}
+
+/* Recursos del Sistema - Islas agrupadas con corte diagonal */
+#cpu, #memory {
+    background: #1e1e2e;
+    padding: 0 12px;
+}
+
+#cpu {
+    border-radius: 15px 0 0 15px;
+    color: #f38ba8;
+    border-left: 2px solid #f38ba8;
+}
+
+#memory {
+    border-radius: 0 15px 15px 0;
+    color: #fab387;
+    border-right: 2px solid #fab387;
+    margin-left: -5px; /* Une las dos islas */
+}
+
+/* Audio y Red */
+#pulseaudio, #network {
+    background: #313244;
+    border-radius: 10px;
+    padding: 0 12px;
+    margin: 0 2px;
+}
+
+#pulseaudio { color: #a6e3a1; }
+#network { color: #94e2d5; }
+
+/* Botón de Apagado - El "Trigger" */
+#custom-power {
+    background: #f38ba8;
+    color: #11111b;
+    padding: 0 12px;
+    border-radius: 50%; /* Circular */
+    margin-right: 10px;
+}
+
+#custom-power:hover {
+    background: #ffffff;
+    color: #ff0000;
+    box-shadow: 0 0 20px #f38ba8;
+}

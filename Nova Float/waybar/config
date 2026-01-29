@@ -1,0 +1,63 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 8,
+
+    "modules-left": ["custom/launcher", "hyprland/workspaces", "mpris"],
+    "modules-center": ["clock"],
+    "modules-right": ["network", "pulseaudio", "backlight", "battery", "custom/power"],
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "active": "󰮯",
+            "default": "󰊠"
+        }
+    },
+
+    "mpris": {
+        "format": "{player_icon} {title}",
+        "format-paused": "󰏤 {title}",
+        "player-icons": {
+            "default": "󰎆",
+            "spotify": ""
+        },
+        "max-length": 25
+    },
+
+    "clock": {
+        "format": "󱑂 {:%H:%M}",
+        "format-alt": "󰃭 {:%a %d %b}",
+        "tooltip-format": "<tt>{calendar}</tt>"
+    },
+
+    "network": {
+        "format-wifi": "󰤨  {bandwidthDownBits}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{essid} - {ipaddr}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟",
+        "format-icons": { "default": ["󰕿", "󰖀", "󰕾"] },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "rofi -show drun",
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": "󰐥",
+        "on-click": "wlogout",
+        "tooltip": false
+    }
+}
